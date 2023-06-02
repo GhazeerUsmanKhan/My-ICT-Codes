@@ -2,20 +2,13 @@ print("Welcome to the Official Piggy Bank Fiduciary Application. ")
 a=input("Since I know you are a new initiate, please enter your signup Username. ")
 b=input("Please enter the password for your account. You can trust us that no one is breaching your privacy. ")
 print("Since you are a new initiate, we have decided to provide you with Rs.1000 extra. ")
-reconfirmacc=input("Please reconfirm your account username before continuing. ")
-if reconfirmacc==a:
-    print("This is correct, you can continue. ")
-if reconfirmacc!=a:
-    print("This is incorrect. Please restart the program. ")
-if reconfirmacc==a:
-    try:
-        reconfirmpass=input("Please reconfirm your password too. ")
-        if reconfirmpass==b:
-            print("This Password is also the same, you may continue with your banking options. ")
-    except reconfirmpass!=b:
-        print("This is not your password, please restart the program and try again. ")
+reconfirmpass=input("Please reconfirm your password. ")
 if reconfirmpass==b:
-    bankingopt1=int(input("Press 1 to see your banking info, and 2 to skip ahead. "))
+        print("This Password is also the same, you may continue with your banking options. ")
+if reconfirmpass==b:
+    try:
+        bankingopt1=int(input("Press 1 to see your banking info, and 2 to skip ahead. "))
+
 if bankingopt1==1:
     print("As of now, you have Rs1000 in your account, with no deposits made. ")
 if bankingopt1==2:

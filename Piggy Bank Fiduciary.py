@@ -1,9 +1,7 @@
 import random
 import sys
 import re
-import random
-import sys
- 
+
 class ATM():
     def __init__(self, name, password, balance = 0):
         self.name = name

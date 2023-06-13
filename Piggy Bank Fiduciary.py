@@ -6,7 +6,7 @@ class ATM():
     def __init__(self, name, password, balance = 0):
         self.name = name
         self.password = password
-        self.balance = balance
+        self.balance = balance+1000
          
     def account_detail(self):
         print("\n----------ACCOUNT DETAIL----------")
@@ -73,7 +73,7 @@ class ATM():
               Transaction is now complete.                         
                
               Account holder: {self.name.upper()}                  
-              Available balance: Nu.{self.balance}                 
+              Available balance: Rs.{self.balance}                 
               Thanks for choosing us as your bank                  
           ******************************************
           """)

@@ -84,7 +84,14 @@ print("    Welcome to the Official Piggy Bank Fiduciary Application     ")
 print("___________________________________________________________\n")
 print("----------ACCOUNT CREATION----------")
 name = input("Enter your name: ")
-password = input("Enter your Password: ")
+
+while True:
+    password=input("Please enter the password for your account. Password needs to have at least 1 Uppercase, 1 Lowercase and 1 special character. Has to be a minimum of 8 letters. ")
+    password_pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+    x=re.match(password_pattern, password)
+    if x:
+        print("Your password is picture perfect. Please Continue.")
+        break
 
 
 print("Congratulations! Account created successfully......\n")

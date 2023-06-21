@@ -61,10 +61,18 @@ class ATM():
                 elif option == 2:
                     atm.check_balance()
                 elif option == 3:
-                    amount = int(input("How much you want to deposit(Rs.):"))
+                    try:
+                        amount=int(input("How much you want to deposit(Rs.):"))
+                        assert amount>0
+                    except AssertionError:
+                        sys.exit("You cannot deposit Negative Numbers!!! Restarting Program")   
                     atm.deposit(amount)
                 elif option == 4:
-                    amount = int(input("How much you want to withdraw(Rs.):"))
+                    try:
+                        amount=int(input("How much you want to withdraw(Rs.):"))
+                        assert amount>0
+                    except AssertionError:
+                        sys.exit("You cannot withdraw Negative Numbers!!! Restarting Program")
                     atm.withdraw(amount)
                 elif option == 5:
                     print(f"""

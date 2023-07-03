@@ -64,6 +64,8 @@ class ATM():
                     try:
                         amount=int(input("How much you want to deposit(Rs.):"))
                         assert amount>0
+                    except ValueError:
+                        sys.exit("This is not a number, please try again later")
                     except AssertionError:
                         sys.exit("You cannot deposit Negative Numbers!!! Restarting Program")   
                     atm.deposit(amount)
@@ -71,6 +73,8 @@ class ATM():
                     try:
                         amount=int(input("How much you want to withdraw(Rs.):"))
                         assert amount>0
+                    except ValueError:
+                        sys.exit("This is not a number, please try again later")
                     except AssertionError:
                         sys.exit("You cannot withdraw Negative Numbers!!! Restarting Program")
                     atm.withdraw(amount)

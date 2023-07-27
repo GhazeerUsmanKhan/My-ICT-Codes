@@ -4,10 +4,8 @@ f.close()
 f=open("first criminal.txt", "r")
 print(f.read())
 
-dollarbills=input("Enter Your Name. ")
-f=open("input saving trial.txt", "w")
-f.write(dollarbills)
-f.close()
-f=open("input saving trial.txt", "r")
-print(f.read())
-
+filename=input("Enter Your File Name")
+print(f'{filename}.txt') 
+with open(f'{filename}.txt', 'w', encoding='utf-8') as f:
+    f.write('first line' + '\n')
+    f.write('second line' + '\n')
